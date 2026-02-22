@@ -1,5 +1,90 @@
-# TrabalhoFinal da disciplina de Programação
-Criação de um sistema para gerenciamento de biblioteca, utilizando as linguagens: python e mysql.
+# 📚 Sistema de Gerenciamento de Biblioteca
 
-O sistema de gerenciamento da biblioteca permite que, ao acessar, o usuário escolha se é funcionário ou cliente e realize o login. Funcionários têm permissões para adicionar, editar e excluir livros, além de registrar empréstimos e devoluções. Ao emprestar um livro, o funcionário solicita o CPF do cliente, o ID do livro e registra a data do empréstimo, definindo a devolução para 15 dias depois. Quando o livro é devolvido, o sistema calcula a multa, se houver atraso, de R$0,50 por dia. Funcionários também podem cadastrar novos clientes e funcionários. Clientes, por sua vez, podem visualizar seus empréstimos e consultar os livros disponíveis. O prazo para devolução é sempre de 15 dias, e caso o cliente ou funcionário tenha algum livro atrasado, ele fica impedido de pegar novos livros emprestados até que o atraso seja regularizado. O sistema ainda realiza uma verificação de CPF para garantir a validade dos dados de clientes e funcionários. 
-Todas as informações, como dados de usuários, livros, empréstimos e devoluções, ficam salvas no banco de dados, garantindo a persistência e organização dos registros.
+Este projeto é um sistema de biblioteca desenvolvido em Python, com integração ao banco de dados MySQL, voltado ao controle de usuários, livros, empréstimos, devoluções e multas.
+
+O sistema é executado via terminal e possui autenticação com controle de permissões por tipo de usuário.
+
+---
+
+## 🚀 Funcionalidades
+
+### 🔐 Autenticação
+- Login com usuário e senha
+- Controle de tentativas
+- Separação de perfis:
+  - Funcionário
+  - Cliente
+
+---
+
+### 👨‍💼 Funcionalidades do funcionário
+- Cadastrar, editar, excluir e listar clientes
+- Cadastrar, editar, excluir e listar funcionários
+- Cadastrar, editar, excluir e listar livros
+- Realizar empréstimos
+- Registrar devoluções
+
+---
+
+### 👤 Funcionalidades do cliente
+- Visualizar livros disponíveis
+- Visualizar seus empréstimos
+- Calcular multas
+- Visualizar multas
+- Pagar multas
+
+---
+
+### 📚 Controle de livros
+- Cadastro de livros
+- Controle de quantidade
+
+---
+
+### 🔁 Empréstimos
+- Registro de empréstimos
+- Registro de devoluções
+- Associação do funcionário responsável
+
+---
+
+### 💰 Multas
+- Cálculo de multa por atraso
+- Consulta de multas do cliente
+- Pagamento de multa
+
+---
+
+### 🧾 Validações
+- Validação de CPF
+- Verificação de dados antes de operações no banco
+
+---
+
+## 🛠 Tecnologias utilizadas
+
+- Python
+- MySQL
+- Programação Orientada a Objetos
+
+---
+
+## 🗃 Estrutura do projeto
+
+- Arquivo principal com os menus e controle do sistema
+- Arquivo `classes.py` com as classes:
+  - Cliente
+  - Funcionario
+  - Livro
+  - Emprestimo
+
+---
+
+## ▶️ Execução
+
+1. Configure o banco de dados MySQL.
+2. Ajuste as credenciais de conexão no arquivo principal.
+3. Execute o sistema:
+
+```bash
+python main.py
